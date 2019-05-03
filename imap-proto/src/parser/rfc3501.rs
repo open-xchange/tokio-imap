@@ -12,11 +12,11 @@ use nom::IResult;
 
 use std::str;
 
-use crate::parser::rfc4551;
 use crate::types::*;
-use crate::core::*;
-use crate::body::*;
-use crate::body_structure::*;
+use super::core::*;
+use super::body::*;
+use super::body_structure::*;
+use super::rfc4551;
 
 
 fn tag_char(c: u8) -> bool {

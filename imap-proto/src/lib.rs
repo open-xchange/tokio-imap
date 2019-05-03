@@ -5,13 +5,7 @@ extern crate nom;
 #[macro_use]
 extern crate assert_matches;
 
-#[macro_use]
-mod macros;
-
-pub mod body;
-pub mod body_structure;
 pub mod builders;
-pub mod core;
 mod parser;
 pub mod types;
 
