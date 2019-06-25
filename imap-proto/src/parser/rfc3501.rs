@@ -14,6 +14,7 @@ use std::str;
 
 use crate::parser::rfc4551;
 use crate::parser::rfc5161;
+use crate::parser::coi;
 use types::*;
 use core::*;
 use body::*;
