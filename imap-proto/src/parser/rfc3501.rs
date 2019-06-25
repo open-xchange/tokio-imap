@@ -13,6 +13,7 @@ use nom::IResult;
 use std::str;
 
 use crate::parser::rfc4551;
+use crate::parser::rfc5161;
 use types::*;
 use core::*;
 use body::*;
@@ -505,7 +506,9 @@ named!(response_data<Response>, do_parse!(
         mailbox_data |
         message_data_expunge |
         message_data_fetch |
-        resp_capability
+        resp_capability |
+        rfc5161::enabled |
+        coi::resp_coi
     ) >>
     tag_s!("\r\n") >>
     (contents)
